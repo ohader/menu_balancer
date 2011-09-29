@@ -1,0 +1,10 @@
+lib.tx_menubalancer.userFunc = Tx_MenuBalancer_Renderer->execute
+lib.tx_menubalancer.userFunc {
+	size = 2
+	sizePattern = #<li[^>]*>#m
+	splitPattern = #(<li[^>]*>|</li>)#m
+	splitStart = <li
+	splitEnd = </li>
+	unWrap = <ul>|</ul>
+	reWrap = <ul>|</ul>
+}
