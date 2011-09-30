@@ -1,12 +1,33 @@
 <?php
+/***************************************************************
+ * Copyright notice
+ *
+ * (c) 2011 Oliver Hader <oliver.hader@typo3.org>
+ * All rights reserved
+ *
+ * This script is part of the TYPO3 project. The TYPO3 project is
+ * free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * The GNU General Public License can be found at
+ * http://www.gnu.org/copyleft/gpl.html.
+ *
+ * This script is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * This copyright notice MUST APPEAR in all copies of the script!
+ ***************************************************************/
+
 /**
- * Created by JetBrains PhpStorm.
- * User: olly
- * Date: 29.09.11
- * Time: 18:44
- * To change this template use File | Settings | File Templates.
+ * Renders the content and serves as user function in TypoScript.
+ *
+ * @author Oliver Hader <oliver.hader@typo3.org>
+ * @package menu_balancer
  */
- 
 class Tx_MenuBalancer_Renderer {
 	/**
 	 * @return tslib_cObj
@@ -14,6 +35,8 @@ class Tx_MenuBalancer_Renderer {
 	public $cObj;
 
 	/**
+	 * Executes the splitting, balancing and accordant content rendering.
+	 *
 	 * @param string $content
 	 * @param array $configuration
 	 * @return string
@@ -41,7 +64,9 @@ class Tx_MenuBalancer_Renderer {
 	}
 
 	/**
-	 * @param $content
+	 * Gets the balanced part collection.
+	 *
+	 * @param string $content
 	 * @param Tx_MenuBalancer_Model_Configuration $configuration
 	 * @return Tx_MenuBalancer_Model_BalancedPartCollection
 	 */
@@ -72,6 +97,8 @@ class Tx_MenuBalancer_Renderer {
 	}
 
 	/**
+	 * Gets the configuration object.
+	 *
 	 * @param array $configuration
 	 * @return Tx_MenuBalancer_Model_Configuration
 	 */
