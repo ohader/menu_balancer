@@ -70,7 +70,7 @@ class Tx_MenuBalancer_Service_Splitter {
 
 			$level = 0;
 			$content = '';
-			$splitParts = '';
+			$splitParts = array();
 
 				// Collect to only separate parts on the first level:
 			foreach ($allParts as $allPart) {
